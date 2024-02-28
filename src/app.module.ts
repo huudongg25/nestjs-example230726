@@ -9,14 +9,18 @@ import { ProfileModule } from './modules/profile/profile.module';
 import { OrderModule } from './modules/order/order.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmConfig), UsersModule, UploadModule, ProfileModule, OrderModule],
+  imports: [
+    TypeOrmModule.forRoot(typeOrmConfig),
+    UsersModule,
+    UploadModule,
+    ProfileModule,
+    OrderModule,
+  ],
   controllers: [],
   providers: [],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(LoggerMiddleware)
-      .forRoutes(UsersController);
+    consumer.apply(LoggerMiddleware).forRoutes(UsersController);
   }
 }

@@ -71,12 +71,9 @@ export class EmailService {
      </div>
        </body>
      </html>
-   `
-
+   `,
     };
 
-    return await this.transporter.sendMail(mailOptions);
+    return await this.transporter.sendMail();
   }
 }
-
-

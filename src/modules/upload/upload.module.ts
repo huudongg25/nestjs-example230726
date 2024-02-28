@@ -11,9 +11,8 @@ import { cloudinaryConfig, multerConfig } from 'src/config/file.config';
     }),
   ],
   providers: [FileService],
-  controllers: [FileController]
+  controllers: [FileController],
 })
-
 export class UploadModule {
   constructor() {
     cloudinaryConfig();

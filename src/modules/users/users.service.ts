@@ -3,12 +3,9 @@ import { UserRepository } from './users.repository';
 
 @Injectable()
 export class UsersService {
-    constructor(
-        private userRepo: UserRepository
-    ) {
-    }
+  constructor(private userRepo: UserRepository) {}
 
-    getAllUser(): string {
-        return this.userRepo.getUser()
-    }
+  getAllUser(): string {
+    return this.userRepo.getUser();
+  }
 }
